@@ -1,0 +1,31 @@
+extends layout 
+block content 
+    .container_add
+        form(action="/account/add" method="POST" enctype="multipart/form-data")
+            .mb-3
+                label.form-label(for='name') Mahsulot nomi
+                input.form-control#name(name="name" type='text' placeholder="Mahsulot nomi" required)
+            .mb-3
+                label.form-label(for='exampleInputPassword1') Mahsulot narxi
+                input.form-control#exampleInputPassword1(name="price" type='number' placeholder="Mahsulot narxi" required)
+            .mb-3
+                label.form-label(for='exampleInputEmail1') Turi
+                select#exampleInputEmail1(name="select").form-select
+                    option(value="Bolalar dunyosi") Bolalar dunyosi  
+                    option(value="Ko'chmas mulk") Ko'chmas mulk 
+                    option(value="Transport") Transport   
+                    option(value="Ish") Ish 
+                    option(value="Hayvonlar") Hayvonlar
+                    option(value="Uy va bog'") Uy va bog'
+                    option(value="Elektor jihozlari") Elektor jihozlari
+                    option(value="Xizmatlar") Xizmatlar
+                    option(value="Moda va stil") Moda va stil
+                    option(value="Xobbi , dam olish sport") Xobbi , dam olish sport
+                    option(value="Tekinga beraman") Tekinga beraman
+            .mb-3
+                label.form-label(for='img') Mahsulot rasmi
+                input.form-control#img(name="img" type='file' placeholder="Mahsulot rasmi" required)
+            .mb-3
+                label.form-label(for='more') Mahsulot haqida
+                textarea#more(name="textarea", cols="100", rows="10" required).form-control
+            button.btn.btn-primary(type='submit') Joylash

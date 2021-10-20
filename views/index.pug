@@ -1,0 +1,65 @@
+extends layout 
+block content
+    .container
+            .row.m-0.pt-5.row_index
+                .search_div
+                    .col-lg-7.search_col
+                        .input-group.mb-3.pt-3
+                            input.form-control(type='text' placeholder='Search' aria-label='Search' aria-describedby='basic-addon1' class="search_input")
+                            span.input-group-text#basic-addon1 
+                                i.fas.fa-search
+                .col-12
+                    .row.align-items-baseline.row_maincategories
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/detskiy_mir/").img_col_1 
+                                img(src="/images/detskiy_mir.png", alt="").detskiy_mir
+                                span Bolalar dunyosi
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/key/").img_col_1 
+                                img(src="/images/key.png", alt="").key
+                                span Ko'chmas mulk
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/cars/").img_col_1 
+                                img(src="/images/car.png", alt="").car
+                                span Transport
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/work/").img_col_1 
+                                img(src="/images/portfel.png", alt="").portfel
+                                span Ish
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/animals/").img_col_1 
+                                img(src="/images/animal.png", alt="").animal
+                                span Hayvonlar
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/sad/").img_col_1 
+                                img(src="/images/sad.png", alt="").sad
+                                span Uy va bog'
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/elektronika/").img_col_1 
+                                img(src="/images/phone.png", alt="").phone
+                                span Elektr jihozlari
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/usluga/").img_col_1 
+                                img(src="/images/uslugi.png", alt="").uslugi
+                                span Xizmatlar
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/stil/").img_col_1 
+                                img(src="/images/moda.png", alt="").moda
+                                span Moda va stil
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/xobbi/").img_col_1 
+                                img(src="/images/xobbi.png", alt="").hobbi
+                                span Xobbi, dam olish sport
+                        .col-xl-1.col-lg-2.col-md-2.col-2.text-center 
+                            a(href="/free/").img_col_1 
+                                img(src="/images/otdam_darom.png", alt="").otdam_darom
+                                span Tekinga beraman
+                .col-lg-12
+                    .row.justify-content-around
+                        each product in db 
+                            .card(style='width: 17rem;').big_div
+                                img.card-img-top(src="images/" + product.img alt='...')
+                                .card-body
+                                    h5.card-title.text_title= product.name
+                                    p.card-text= product.price + " so'm"
+                                    a.btn.btn-primary(href='/account/product_more/' + product.id) More

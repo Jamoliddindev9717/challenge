@@ -1,0 +1,20 @@
+{
+  "name": "bower",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Jamoliddin <jamoliddindev@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/JamoliddinPartfolio/chellenge",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
